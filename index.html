@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>echart-demo</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header class="mianHeader">
+      <h1>EChart-可视化学习</h1>
+      <div class="showTime">2020年12月16日 14:00:00</div>
+    </header>
+
+    <mian class="mianBox">
+      <div class="column">
+        <div class="panel">
+          <div class="panleFooter"></div>
+
+          <h2>本年商场顾客男女人数统计</h2>
+          <div class="chart" id="chart1"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panleFooter"></div>
+
+          <h2>折线图</h2>
+          <div class="chart" id="chart2"></div>
+        </div>
+
+        <div class="panel">
+          <div class="panleFooter"></div>
+
+          <h2>比例</h2>
+          <div class="chart" id="chart3"></div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="digitBoard">
+          <div class="digitInfo">
+            <p>156151</p>
+            <p>211515</p>
+          </div>
+          <div class="digitTitle">
+            <p>前端需求人数</p>
+            <p>市场供应人数</p>
+          </div>
+        </div>
+
+        <div class="mapChart">
+          <img src="./images/map.png" alt="" />
+          <img src="./images/lbx.png" alt="" />
+          <img src="./images/jt.png" alt="" />
+          <div id="map"></div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="panel">
+          <div class="panleFooter"></div>
+
+          <h2>柱状图-销售情况</h2>
+          <div class="chart" id="chart4"></div>
+        </div>
+        <div class="panel">
+          <div class="panleFooter"></div>
+
+          <h2>折线图-播放量</h2>
+          <div class="chart" id="chart5"></div>
+        </div>
+        <div class="panel">
+          <div class="panleFooter"></div>
+
+          <h2>饼形图-地区分布</h2>
+          <div class="chart" id="chart6"></div>
+        </div>
+      </div>
+    </mian>
+
+    <script>
+      const showTimeLab = document.querySelector('.showTime')
+      function showTime() {
+        const nowTimeString = new Date().toLocaleString()
+        showTimeLab.innerText = nowTimeString
+      }
+      setInterval(showTime, 1000)
+    </script>
+
+    <script src="./js/flexible.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="./js/chart1.js"></script>
+    <script src="./js/chart2.js"></script>
+    <script src="./js/chart3.js"></script>
+    <script src="./js/chart4.js"></script>
+    <script src="./js/chart5.js"></script>
+    <script src="./js/chart6.js"></script>
+    <script src="./js/china.js"></script>
+    <script src="./js/map.js"></script>
+  </body>
+</html>
